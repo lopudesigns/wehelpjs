@@ -1,6 +1,6 @@
 {
   "name": "wehelpjs",
-  "version": "0.6.9",
+  "version": "0.6.10",
   "description": "wehelpjs is the JavaScript API Library for the WeYouMe blockchain",
   "main": "lib/index.js",
   "scripts": {
@@ -46,13 +46,13 @@
     "cross-env": "^5.0.0",
     "cross-fetch": "^1.1.1",
     "debug": "^2.6.8",
-    "detect-node": "^2.0.3",
+    "detect-node": "^2.0.4",
     "ecurve": "^1.0.5",
-    "lodash": "^4.16.4",
+    "lodash": "^4.17.11",
     "secure-random": "^1.1.1",
     "wecryptojs": "^1.2.111111",
-    "werpcjs": "latest",
-    "ws": "^3.3.2"
+    "werpcjs": "^1.2.118",
+    "ws": "^3.3.3"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
