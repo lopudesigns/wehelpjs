@@ -551,7 +551,7 @@ wehelpjs.broadcast.accountCreateWithDelegation(wif, fee, delegation, creator, ne
   console.log(err, result);
 });
 ```
-### Delegate E Score
+### Delegate Score
 ```
 wehelpjs.broadcast.delegateSCORE(wif, delegator, delegatee, SCORE, function(err, result) {
   console.log(err, result);

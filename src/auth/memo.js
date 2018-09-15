@@ -95,15 +95,15 @@ function checkEncryption() {
     encodeTest = true // prevent infinate looping
     try {
 
-      const wif = '5JNHfZYKGaomSFvd4NUdQ9qMcEAC43kujbfjueTHpVapX1Kzq2n'
+      const wif = '5Ka4C9CK3sM1Cg1CoEPhSN9QB8f8nF6TD6sKwdaEW9ohJg8q2ve'
       // const wif = '5JdeC9P7Pbd1uGdFVEsJ41EkEnADbbHGq6p1BwFxm6txNBsQnsw'
-      const pubkey = 'TWYM6LLegbAgLAy28EHrffBVuANFWcFgmqRMW13wBmTExqFE9SCkg4'
-      const cyphertext = encode(wif, pubkey, '#memo爱')
+      const pubkey = 'TWYM8cqdmALccUX9qqbVEHei73pu8HQBibym4htMeZy83onTqL2cHr'
+      const cyphertext = encode(wif, pubkey, 'memo')
       plaintext = decode(wif, cyphertext)
     } catch(e) {
       console.error(e);
     } finally {
-      encodeTest = plaintext === '#memo爱'
+      encodeTest = plaintext === 'memo'
     }
   }
   if(encodeTest === false)

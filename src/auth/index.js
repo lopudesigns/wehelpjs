@@ -32,6 +32,7 @@ Auth.verify = function (name, password, auths) {
 Auth.generateKeys = function (name, password, roles) {
 	var pubKeys = {};
 	roles.forEach(function (role) {
+		
 		var seed = name + role + password;
 		var brainKey = seed.trim().split(/[\t\n\v\f\r ]+/).join(' ');
 		var hashSha256 = hash.sha256(brainKey);

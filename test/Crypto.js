@@ -29,7 +29,7 @@ describe("wehelpjs.auth: Crypto", function() {
 describe("wehelpjs.auth: derives", ()=> {
     
     let one_time_private = PrivateKey.fromHex("8fdfdde486f696fd7c6313325e14d3ff0c34b6e2c390d1944cbfe150f4457168")
-    let to_public = PublicKey.fromStringOrThrow("TME7vbxtK1WaZqXsiCHPcjVFBewVj8HFRd5Z5XZDpN6Pvb2dZcMqK")
+    let to_public = PublicKey.fromStringOrThrow("TWYM7vbxtK1WaZqXsiCHPcjVFBewVj8HFRd5Z5XZDpN6Pvb2dZcMqK")
     let secret = one_time_private.get_shared_secret( to_public )
     let child = hash.sha256( secret )
     
@@ -41,14 +41,14 @@ describe("wehelpjs.auth: derives", ()=> {
     
     it("child from public", ()=> assert.equal(
         to_public.child(child).toString(),
-        "TME6XA72XARQCain961PCJnXiKYdEMrndNGago2PV5bcUiVyzJ6iL",
+        "TWYM6XA72XARQCain961PCJnXiKYdEMrndNGago2PV5bcUiVyzJ6iL",
         "derive child public key"
     ))
     
     // child = hash.sha256( one_time_private.get_secret( to_public ))
     it("child from private", ()=> assert.equal(
         PrivateKey.fromSeed("alice-brain-key").child(child).toPublicKey().toString(),
-        "TME6XA72XARQCain961PCJnXiKYdEMrndNGago2PV5bcUiVyzJ6iL",
+        "TWYM6XA72XARQCain961PCJnXiKYdEMrndNGago2PV5bcUiVyzJ6iL",
         "derive child from private key"
     ))
     

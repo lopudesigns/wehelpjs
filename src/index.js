@@ -1,5 +1,6 @@
 const api = require('./api');
 const auth = require('./auth');
+const help = require('./help');
 const broadcast = require('./broadcast');
 const formatter = require('./formatter')(api);
 const memo = require('./auth/memo');
@@ -13,5 +14,6 @@ module.exports = {
   formatter,
   memo,
   config,
-  utils,
+	utils,
+	help
 };
