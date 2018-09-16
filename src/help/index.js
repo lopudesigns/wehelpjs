@@ -111,14 +111,14 @@ let fillGaps = function(args){
 		Promise.all([])
 
 }
-generateUsername = function(args){
+let generateUsername = function(args){
 	init(args, this)
 	return new Promise((resolve, reject)=>{
 		username = wecryptojs.sha256()
 		resolve(username)
 	})
 }
-usernameCheck = function(args){
+let usernameCheck = function(args){
 	init(args, this)
 	return new Promise((resolve, reject)=>{
 		if(!newAccountUsername){
