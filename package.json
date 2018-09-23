@@ -1,6 +1,6 @@
 {
   "name": "wehelpjs",
-  "version": "0.6.19",
+  "version": "0.6.20",
   "description": "wehelpjs is the JavaScript API Library for the WeYouMe blockchain",
   "main": "lib/index.js",
   "scripts": {
@@ -50,7 +50,7 @@
     "ecurve": "^1.0.5",
     "lodash": "^4.17.11",
     "secure-random": "^1.1.1",
-    "wecryptojs": "latest",
+    "wecryptojs": "^1.2.38",
     "werpcjs": "latest",
     "ws": "^3.3.3"
   },
