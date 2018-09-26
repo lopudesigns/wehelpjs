@@ -95,9 +95,9 @@ function checkEncryption() {
     encodeTest = true // prevent infinate looping
     try {
 
-      const wif = '5KfPinD8yJWb6g3GXwy35eoubeiAu8n6w5npRmNs7tooPna4eqG'
+      const wif = "5JdCeK8bPbtcCBWdqX85a2hFAMSSGWJmwTTNi2egWCTvcny9Wqs"
       // const wif = '5JdeC9P7Pbd1uGdFVEsJ41EkEnADbbHGq6p1BwFxm6txNBsQnsw'
-      const pubkey = 'TWYM7GXFkFDNkweQJHhegS1iX5vg1oEouAhZ5EZZR34cYUxQvHFii5'
+      const pubkey = "TWYM76FNC7oyuecCciUfDqfpLQwMcDsoJN8octqCaWdJy2k8pavPi4"
       const cyphertext = encode(wif, pubkey, 'memo')
       plaintext = decode(wif, cyphertext)
     } catch(e) {
