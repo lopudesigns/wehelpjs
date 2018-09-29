@@ -1,13 +1,13 @@
 {
   "name": "wehelpjs",
-  "version": "0.6.21",
+  "version": "0.6.23",
   "description": "wehelpjs is the JavaScript API Library for the WeYouMe blockchain",
   "main": "lib/index.js",
   "scripts": {
     "test": "eslint --quiet src test; mocha -t 40000 --require babel-polyfill --require babel-register",
-    "test-auth": "npm test -- --grep 'webuilder1'",
+    "test-auth": "npm test --grep 'webuilder'",
     "build": "npm run build-browser && npm run build-node",
-    "build-browser": "rm -rf dist && NODE_EeNV=production node ./node_modules/webpack/bin/webpack.js && gzip -k -f ./dist/*.js && du -h ./dist/*",
+    "build-browser": "rm -rf dist && NODE_ENV=production node ./node_modules/webpack/bin/webpack.js && gzip -k -f ./dist/*.js && du -h ./dist/*",
     "build-node": "mkdir -p ./lib && cp -r ./src/* ./lib/ && babel ./src --out-dir ./lib",
     "prepublish": "npm run build",
     "push": "git add . ; git commit -m 'ready' ; git push origin dev",
