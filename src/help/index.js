@@ -19,7 +19,7 @@ let	createAccount = function({
 	postingPub,
 	activePub,
 	memoPub,
-	jsonMetadata,
+	json,
 	callback,
 	matchWithCreator
 }={}){

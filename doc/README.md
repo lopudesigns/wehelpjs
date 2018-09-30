@@ -541,13 +541,13 @@ wehelpjs.api.broadcastBlock(b, function(err, result) {
 
 ### Account Create
 ```
-wehelpjs.broadcast.accountCreate(wif, fee, creator, newAccountName, owner, active, posting, memoKey, jsonMetadata, function(err, result) {
+wehelpjs.broadcast.accountCreate(wif, fee, creator, newAccountName, owner, active, posting, memoKey, json, function(err, result) {
   console.log(err, result);
 });
 ```
 ### Account Create With Delegation
 ```
-wehelpjs.broadcast.accountCreateWithDelegation(wif, fee, delegation, creator, newAccountName, owner, active, posting, memoKey, jsonMetadata, extensions, function(err, result) {
+wehelpjs.broadcast.accountCreateWithDelegation(wif, fee, delegation, creator, newAccountName, owner, active, posting, memoKey, json, extensions, function(err, result) {
   console.log(err, result);
 });
 ```
@@ -559,7 +559,7 @@ wehelpjs.broadcast.delegateSCORE(wif, delegator, delegatee, SCORE, function(err,
 ```
 ### Account Update
 ```
-wehelpjs.broadcast.accountUpdate(wif, account, owner, active, posting, memoKey, jsonMetadata, function(err, result) {
+wehelpjs.broadcast.accountUpdate(wif, account, owner, active, posting, memoKey, json, function(err, result) {
   console.log(err, result);
 });
 ```
@@ -589,7 +589,7 @@ wehelpjs.broadcast.changeRecoveryAccount(wif, accountToRecover, newRecoveryAccou
 ```
 ### Comment
 ```
-wehelpjs.broadcast.comment(wif, parentAuthor, parentPermlink, author, permlink, title, body, jsonMetadata, function(err, result) {
+wehelpjs.broadcast.comment(wif, parentAuthor, parentPermlink, author, permlink, title, body, json, function(err, result) {
   console.log(err, result);
 });
 ```
