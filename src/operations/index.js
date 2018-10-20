@@ -1,4 +1,4 @@
-import * as operation from './operation.js'
+import * as operation from './operations.js'
 
 let isTransactionFormatValid = function(transaction){
 	if (Array.isArray(transaction)) {

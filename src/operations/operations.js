@@ -152,5 +152,9 @@ module.exports = {
   isValid,
   parseQuery,
   normalize,
-  validate,
+	validate,
+	customOperations,
+	helperOperations,
+	operationAuthor,
+	operations
 };
