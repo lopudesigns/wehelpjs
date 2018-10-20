@@ -176,7 +176,7 @@ let init = function(args, that){
     });
 	});
 }
-let isTransactionFormatValid = function(transaction) => {
+let isTransactionFormatValid = function(transaction){
 	if (Array.isArray(transaction)) {
 		for (let i = 0; i < transaction.length; i += 1) {
 			if (!Array.isArray(transaction[i]) || transaction[i].length < 2) {
