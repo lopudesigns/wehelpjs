@@ -1,7 +1,7 @@
 const cloneDeep = require('lodash/cloneDeep');
 const join = require('lodash/join');
-const wehelpjs = require('wehelpjs');
-const { formatter } = require('wehelpjs');
+const api = require('../../api');
+const formatter = require('../../formatter');
 const { isAsset, isEmpty, userExists, normalizeUsername } = require('./validation-utils');
 
 const optionalFields = ['delegator'];
@@ -9,7 +9,7 @@ const optionalFields = ['delegator'];
 const parse = async (query) => {
   const cQuery = cloneDeep(query);
   const [amount, symbol] = cQuery.SCORE.split(' ');
-  const globalProps = await wehelpjs.api.getDynamicGlobalPropertiesAsync();
+  const globalProps = await api.getDynamicGlobalPropertiesAsync();
 
   cQuery.delegatee = normalizeUsername(cQuery.delegatee);
   cQuery.delegator = normalizeUsername(cQuery.delegator);
@@ -51,26 +51,26 @@ const normalize = async (query) => {
   const cQuery = cloneDeep(query);
 
   let sUsername = normalizeUsername(query.delegatee);
-  let accounts = await wehelpjs.api.getAccountsAsync([sUsername]);
+  let accounts = await api.getAccountsAsync([sUsername]);
   let account = accounts && accounts.length > 0 && accounts.find(a => a.name === sUsername);
   if (account) {
     cQuery.toName = account.name;
-    cQuery.toReputation = wehelpjs.formatter.reputation(account.reputation);
+    cQuery.toReputation = formatter.reputation(account.reputation);
   }
 
   if (query.delegator) {
     sUsername = normalizeUsername(query.delegator);
-    accounts = await wehelpjs.api.getAccountsAsync([sUsername]);
+    accounts = await api.getAccountsAsync([sUsername]);
     account = accounts && accounts.length > 0 && accounts.find(a => a.name === sUsername);
     if (account) {
       cQuery.fromName = account.name;
-      cQuery.fromReputation = wehelpjs.formatter.reputation(account.reputation);
+      cQuery.fromReputation = formatter.reputation(account.reputation);
     }
   }
 
   const [amount, symbol] = cQuery.SCORE.split(' ');
   if (amount && symbol === 'SCORE') {
-    const globalProps = await wehelpjs.api.getDynamicGlobalPropertiesAsync();
+    const globalProps = await api.getDynamicGlobalPropertiesAsync();
     cQuery.amount = join(
       [
         formatter.SCOREinTMEvalue(

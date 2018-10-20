@@ -1,4 +1,4 @@
-const wehelpjs = require('wehelpjs');
+const api = require('../../api');
 const moment = require('moment');
 
 const isEmpty = value => value === undefined || value === null || value === '';
@@ -43,12 +43,12 @@ const normalizeUsername = username => ((username && username.charAt(0) === '@') 
 
 const userExists = async (username) => {
   const nUsername = normalizeUsername(username);
-  const accounts = await wehelpjs.api.getAccountsAsync([nUsername]);
+  const accounts = await api.getAccountsAsync([nUsername]);
   return accounts && accounts.length > 0 && accounts.find(a => a.name === nUsername);
 };
 
 const contentExists = async (auhtor, permlink) => {
-  const content = await wehelpjs.api.getContentAsync(auhtor, permlink);
+  const content = await api.getContentAsync(auhtor, permlink);
   return content && parseInt(content.id, 10) !== 0;
 };
 
