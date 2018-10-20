@@ -5,9 +5,9 @@ const get = require('lodash/get');
 const has = require('lodash/has');
 const hasIn = require('lodash/hasIn');
 const set = require('lodash/set');
-const operationAuthor = require('../operations/operation-author.json');
-const customOperations = require('../operations/custom-operations');
-const helperOperations = require('../operations');
+const operationAuthor = require('../src/operation-author.json');
+const customOperations = require('../src/custom-operations');
+const helperOperations = require('../src');
 
 /** Parse error message from Node response */
 const getErrorMessage = (error) => {

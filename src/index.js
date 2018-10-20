@@ -6,7 +6,7 @@ const formatter = require('./formatter')(api);
 const memo = require('./auth/memo');
 const config = require('./config');
 const utils = require('./utils');
-
+const operations = require('./operations')
 module.exports = {
   api,
   auth,
@@ -15,5 +15,6 @@ module.exports = {
   memo,
   config,
 	utils,
-	help
+	help,
+	operations
 };

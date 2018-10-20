@@ -1,7 +1,6 @@
 import Api from '../api'
 let api = require('../api')
 let wecryptojs = require('wecryptojs')
-import * as operation from './operation'
 
 let	createAccount = function({
 	accountCreatorAccountUsername,
@@ -175,17 +174,6 @@ let init = function(args, that){
         value: args[key]
     });
 	});
-}
-let isTransactionFormatValid = function(transaction){
-	if (Array.isArray(transaction)) {
-		for (let i = 0; i < transaction.length; i += 1) {
-			if (!Array.isArray(transaction[i]) || transaction[i].length < 2) {
-				return false;
-			}
-		}
-		return true;
-	}
-	return false;
 }
 
 var mainKeys = [
