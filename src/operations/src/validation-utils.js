@@ -6,8 +6,7 @@ const isEmpty = value => value === undefined || value === null || value === '';
 const allowedSymbols = [
   { symbol: 'TSD', precision: 3 },
   { symbol: 'TME', precision: 3 },
-  { symbol: 'ePOWER', precision: 3 },
-  { symbol: 'TME', precision: 3 },
+  { symbol: 'POWER', precision: 3 },
   { symbol: 'SCORE', precision: 6 },
 ];
 
