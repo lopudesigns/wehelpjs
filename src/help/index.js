@@ -1,6 +1,7 @@
 import Api from '../api'
 let api = require('../api')
 let wecryptojs = require('wecryptojs')
+import * as operation from './operation'
 
 let	createAccount = function({
 	accountCreatorAccountUsername,
@@ -25,14 +26,14 @@ let	createAccount = function({
 }={}){
 	return new Promise((resolve, reject)=>{
 		/** 
-		 * @required @arg {String} signingPrivateKey the private key of the account creator in order to sign the transaction
-		 * @arg {String} newAccountMasterPasswordGen @default is @var {String ""} is a boolean intended value for if we want keys generated if none are provided
-		 * @arg {String} useSigningPrivateKeyAsMasterPasswordGen @default is @var {String ""} is a boolean intended value for if we want keys generated if none are provided
-		 * @arg {String} delegatedMethod @default is @var {String ""} is a boolean intended value for if we want the account to be created through delegation of SCORE instead of fee payment
-		 * @arg {String} delegatedMethodFallback @default is @var {String "yes"} is a boolean intended value for if we want the account to be created through delegation of SCORE instead of fee payment
-		 * @arg {String} autopay @default is @var {String "yes"} is a boolean intended value for if we want the fee to be paid automatically by checking the account balance
-		 * @arg {String} matchWithCreator @default is @var {String ""} will broadcast the account creation request to the network and try to match with a sugar daddy
-		 * @returns {Object} @var { account, privateKeys }
+		 * @required @arg @type {String} signingPrivateKey the private key of the account creator in order to sign the transaction
+		 * @arg @type {String} newAccountMasterPasswordGen @default is @var {String ""} is a boolean intended value for if we want keys generated if none are provided
+		 * @arg @type {String} useSigningPrivateKeyAsMasterPasswordGen @default is @var {String ""} is a boolean intended value for if we want keys generated if none are provided
+		 * @arg @type {String} delegatedMethod @default is @var {String ""} is a boolean intended value for if we want the account to be created through delegation of SCORE instead of fee payment
+		 * @arg @type {String} delegatedMethodFallback @default is @var {String "yes"} is a boolean intended value for if we want the account to be created through delegation of SCORE instead of fee payment
+		 * @arg @type {String} autopay @default is @var {String "yes"} is a boolean intended value for if we want the fee to be paid automatically by checking the account balance
+		 * @arg @type {String} matchWithCreator @default is @var {String ""} will broadcast the account creation request to the network and try to match with a sugar daddy
+		 * @returns @type {Object} @var { account, privateKeys }
 		 */
 		validate(arguments, reject)
 
