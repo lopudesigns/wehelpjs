@@ -156,5 +156,6 @@ module.exports = {
 	customOperations,
 	helperOperations,
 	operationAuthor,
-	operations
+	operations,
+	changeCase
 };
