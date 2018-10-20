@@ -1,5 +1,5 @@
 const changeCase = require('change-case');
-const { userExists, isEmpty, normalizeUsername } = require('../validation-utils');
+const { userExists, isEmpty, normalizeUsername } = require('./validation-utils');
 const customOperations = require('./custom-operations');
 const wehelpjs = require('wehelpjs');
 

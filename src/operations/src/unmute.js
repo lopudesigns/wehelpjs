@@ -1,4 +1,4 @@
-const { userExists, isEmpty, normalizeUsername } = require('../validation-utils');
+const { userExists, isEmpty, normalizeUsername } = require('./validation-utils');
 
 const optionalFields = ['follower'];
 

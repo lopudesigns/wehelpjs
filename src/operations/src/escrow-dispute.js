@@ -1,6 +1,6 @@
 const cloneDeep = require('lodash/cloneDeep');
 const validator = require('validator');
-const { isEmpty, userExists, normalizeUsername } = require('../validation-utils');
+const { isEmpty, userExists, normalizeUsername } = require('./validation-utils');
 
 const parse = (query) => {
   const cQuery = cloneDeep(query);

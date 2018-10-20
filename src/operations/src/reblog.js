@@ -1,4 +1,4 @@
-const { contentExists, normalizeUsername } = require('../validation-utils');
+const { contentExists, normalizeUsername } = require('./validation-utils');
 
 const parse = (query) => {
   const cQuery = {

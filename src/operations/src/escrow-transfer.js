@@ -1,7 +1,7 @@
 const cloneDeep = require('lodash/cloneDeep');
 const join = require('lodash/join');
 const validator = require('validator');
-const { isAsset, isDate, isPassedDate, isDateBeforeDate, isEmpty, userExists, normalizeUsername } = require('../validation-utils');
+const { isAsset, isDate, isPassedDate, isDateBeforeDate, isEmpty, userExists, normalizeUsername } = require('./validation-utils');
 
 const parse = (query) => {
   const cQuery = cloneDeep(query);

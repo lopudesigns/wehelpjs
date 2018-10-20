@@ -8,7 +8,7 @@ const set = require('lodash/set');
 const operationAuthor = require('./src/operation-author.json');
 const customOperations = require('./src/custom-operations');
 const helperOperations = require('./src');
-
+const validationUtils = require('./src/validation-utils')
 /** Parse error message from Node response */
 const getErrorMessage = (error) => {
   let errorMessage = '';
@@ -157,5 +157,6 @@ module.exports = {
 	helperOperations,
 	operationAuthor,
 	operations,
-	changeCase
+	changeCase,
+	validationUtils
 };

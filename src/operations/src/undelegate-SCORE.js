@@ -1,7 +1,7 @@
 const cloneDeep = require('lodash/cloneDeep');
 const join = require('lodash/join');
 const wehelpjs = require('wehelpjs');
-const { isEmpty, userExists, normalizeUsername } = require('../validation-utils');
+const { isEmpty, userExists, normalizeUsername } = require('./validation-utils');
 
 const optionalFields = ['delegator', 'SCORE'];
 

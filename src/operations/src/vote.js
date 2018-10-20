@@ -1,5 +1,5 @@
 const cloneDeep = require('lodash/cloneDeep');
-const { contentExists } = require('../validation-utils');
+const { contentExists } = require('./validation-utils');
 
 const optionalFields = ['weight'];
 
