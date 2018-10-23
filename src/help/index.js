@@ -1,6 +1,8 @@
 import Api from '../api'
 let api = require('../api')
 let wecryptojs = require('wecryptojs')
+let validators = require('validators')
+import { key_utils } from '../auth/ecc'
 
 let	createAccount = function({
 	accountCreatorAccountUsername,
@@ -190,5 +192,11 @@ var enums = {
 	"yes": 3,
 	"no": 4
 }
+
+let createSuggestedPassword = () => {
+  const PASSWORD_LENGTH = 32;
+  const privateKey = key_utils.get_random_key();
+  return privateKey.toWif().substring(3, 3 + PASSWORD_LENGTH);
+};
 
 module.exports = this

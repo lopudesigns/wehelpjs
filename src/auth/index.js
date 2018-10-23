@@ -9,6 +9,7 @@ var bigi = require('bigi'),
 	KeyPrivate = require('./ecc/src/key_private'),
 	PublicKey = require('./ecc/src/key_public'),
   hash = require('./ecc/src/hash');
+import { key_utils } from './ecc'; // eslint-disable-line camelcase
 
 var Auth = {};
 var transaction = operations.transaction;
@@ -118,6 +119,11 @@ Auth.signTransaction = function (trx, keys) {
 	}
 
 	return signed_transaction.toObject(Object.assign(trx, { signatures: signatures }))
+};
+Auth.createSuggestedPassword = () => {
+  const PASSWORD_LENGTH = 32;
+  const privateKey = key_utils.get_random_key();
+  return privateKey.toWif().substring(3, 3 + PASSWORD_LENGTH);
 };
 
 module.exports = Auth;
