@@ -1,4 +1,3 @@
-import wehelpjs from 'wehelpjs';
 import { api } from '../api';
 
 export const isUsername = async (username) => {
