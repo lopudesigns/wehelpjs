@@ -4,6 +4,9 @@ let wecryptojs = require('wecryptojs')
 let validators = require('validators')
 import { key_utils } from '../auth/ecc'
 
+/** merge with this */
+	Object.assign(this, validators)
+
 let	createAccount = function({
 	accountCreatorAccountUsername,
 	signingPrivateKey,

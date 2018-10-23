@@ -8,7 +8,7 @@ const config = require('./config');
 const utils = require('./utils');
 const operations = require('./operations')
 const weauth = require('./weauth')
-module.exports = {
+let exp = {
   api,
   auth,
   broadcast,
@@ -20,3 +20,9 @@ module.exports = {
 	operations,
 	weauth
 };
+
+for(var prop in exp){
+	Object.assign(exp, exp[prop])
+}
+
+module.exports = exp
