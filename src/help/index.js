@@ -1,4 +1,3 @@
-import Api from '../api'
 let api = require('../api')
 let wecryptojs = require('wecryptojs')
 let validators = require('./validators')
