@@ -1,6 +1,6 @@
 let api = require('../api')
 let wecryptojs = require('wecryptojs')
-let validators = require('./validators')
+let validators = require('./validators.js')
 import { key_utils } from '../auth/ecc'
 
 /** merge with this */
