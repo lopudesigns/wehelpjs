@@ -1,4 +1,4 @@
-require('babel-polyfill');
+require('@babel/polyfill');
 const changeCase = require('change-case');
 const operations = require('../broadcast/operations');
 const cloneDeep = require('lodash/cloneDeep');
