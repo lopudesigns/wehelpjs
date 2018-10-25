@@ -1,3 +1,4 @@
+require('babel-polyfill');
 import { api } from '../api';
 
 export const isUsername = async (username) => {
