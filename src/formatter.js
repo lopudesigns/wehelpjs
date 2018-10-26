@@ -196,3 +196,5 @@ module.exports = api => {
     createSuggestedPassword
   };
 };
+
+export default api

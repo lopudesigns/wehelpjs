@@ -119,3 +119,4 @@ broadcastHelpers(apiBroadcast);
 Promise.promisifyAll(apiBroadcast);
 
 exports = module.exports = apiBroadcast;
+export default apiBroadcast

@@ -1,7 +1,11 @@
 {
   "presets": [
-    "es2015",
-    "es2017"
+		[
+			"@babel/preset-env",
+			{
+				"forceAllTransforms": true
+			}
+ 		]
 	],
 	"plugins" : [
 		"@babel/plugin-transform-runtime"

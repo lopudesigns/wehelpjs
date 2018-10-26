@@ -14,11 +14,11 @@ const wehelpjs = {
   utils
 };
 
-if (typeof window !== "undefined") {
+if (typeof window !== "undefined" && !window.wehelpjs) {
   window.wehelpjs = wehelpjs;
 }
 
-if (typeof global !== "undefined") {
+if (typeof global !== "undefined" && !global.wehelpjs) {
   global.wehelpjs = wehelpjs;
 }
 

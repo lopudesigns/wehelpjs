@@ -3,6 +3,10 @@ const Visualizer = require('webpack-visualizer-plugin');
 const _ = require('lodash');
 const path = require('path');
 const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const MinifyPlugin = require("babel-minify-webpack-plugin");
+
+require('dotenv').config()
 
 const DEFAULTS = {
   isDevelopment: process.env.NODE_ENV !== 'production',
@@ -20,47 +24,13 @@ function makePlugins(options) {
 
   if (!isDevelopment) {
     plugins = plugins.concat([
-      new webpack.optimize.DedupePlugin(),
-      new webpack.optimize.UglifyJsPlugin({
-        output: {
-          comments: false,
-        },
-        minimize: true,
-        compress: {
-          warnings: false,
-        }
-      }),
-      new webpack.optimize.AggressiveMergingPlugin(),
+			new webpack.optimize.AggressiveMergingPlugin(),
+			new MinifyPlugin({}, {
+				comments: false
+			})
     ]);
   }
-
   return plugins;
-}
-
-function makeStyleLoaders(options) {
-  if (options.isDevelopment) {
-    return [
-      {
-        test: /\.s[ac]ss$/,
-        loaders: [
-          'style',
-          'css?sourceMap',
-          'autoprefixer-loader?browsers=last 2 version',
-          'sass?sourceMap&sourceMapContents',
-        ],
-      },
-    ];
-  }
-
-  return [
-    {
-      test: /\.s[ac]ss$/,
-      loader: ExtractTextPlugin.extract(
-        'style-loader',
-        'css!autoprefixer-loader?browsers=last 2 version!sass'
-      ),
-    },
-  ];
 }
 
 function makeConfig(options) {
@@ -68,12 +38,12 @@ function makeConfig(options) {
   _.defaults(options, DEFAULTS);
 
   const isDevelopment = options.isDevelopment;
-
+	console.log('ISDEV', isDevelopment)
   return {
     devtool: isDevelopment ? 'cheap-eval-source-map' : 'source-map',
     entry: {
       wehelpjs: path.join(options.baseDir, 'src/browser.js'),
-      'wehelpjs-tests': path.join(options.baseDir, 'test/api.test.js'),
+      // 'wehelpjs-tests': path.join(options.baseDir, 'test/api.test.js'),
     },
     output: {
       path: path.join(options.baseDir, 'dist'),
@@ -81,17 +51,29 @@ function makeConfig(options) {
     },
     plugins: makePlugins(options),
     module: {
-      loaders: [
+      rules: [
         {
-          test: /\.js?$/,
-          loader: 'babel',
+					test: /\.js?$/,
+					include: '/node_modules/',
+					use: {
+						loader: 'babel-loader'
+					},
         },
         {
-          test: /\.json?$/,
-          loader: 'json',
+					test: /\.json?$/,
+					include: '/node_modules/',
+          use: {
+						loader: 'json-loader'
+					}
         },
       ],
-    },
+		},
+		// optimization: {
+		// 	minimizer: [new UglifyJsPlugin({
+		// 		test: /\.js(\?.*)?$/i,
+		// 		sourceMap: true
+		// 	})]
+		// }
   };
 }
 

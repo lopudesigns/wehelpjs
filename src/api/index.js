@@ -345,4 +345,6 @@ class Api extends EventEmitter {
 // Export singleton instance
 const api = new Api(config);
 exports = module.exports = api;
+export default api;
 exports.Api = Api;
+exports.api = Api;

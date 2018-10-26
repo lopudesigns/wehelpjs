@@ -1,5 +1,5 @@
 require('@babel/polyfill');
-import { api } from '../api';
+import api from '../api';
 
 export const isUsername = async (username) => {
   const accounts = await api.getAccountsAsync([username]);

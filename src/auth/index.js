@@ -125,5 +125,5 @@ Auth.createSuggestedPassword = () => {
   const privateKey = key_utils.get_random_key();
   return privateKey.toWif().substring(3, 3 + PASSWORD_LENGTH);
 };
-
+export default Auth
 module.exports = Auth;
