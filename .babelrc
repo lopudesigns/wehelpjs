@@ -3,11 +3,19 @@
 		[
 			"@babel/preset-env",
 			{
-				"forceAllTransforms": true
-			}
+				"forceAllTransforms": true,
+				"targets": {
+					"esmodules" : false
+				}
+			},
  		]
 	],
 	"plugins" : [
-		"@babel/plugin-transform-runtime"
+		[
+			"@babel/plugin-transform-runtime",
+			{
+				"polyfill" : false
+			}
+		]
 	]
 }

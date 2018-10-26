@@ -47,6 +47,7 @@ function ripemd160(data) {
 // }
 
 var toExport
+
 module.exports = toExport = {
     sha1: sha1,
     sha256: sha256,
