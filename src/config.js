@@ -16,7 +16,7 @@ class Config {
     this[k] = v;
   }
 }
-
+var configReady
 module.exports = configReady = new Config(defaultConfig);
 if(typeof module.exports.Config !== 'undefined') {
   throw new Error("default config.json file may not contain a property 'Config'");

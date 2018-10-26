@@ -46,6 +46,7 @@ function ripemd160(data) {
 //   return crypto.createHmac('sha512', secret).update(buffer).digest()
 // }
 
+var toExport
 module.exports = toExport = {
     sha1: sha1,
     sha256: sha256,
