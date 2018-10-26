@@ -1,6 +1,6 @@
 {
   "name": "wehelpjs",
-  "version": "0.6.49",
+  "version": "0.6.50",
   "description": "wehelpjs is the JavaScript API Library for the WeYouMe blockchain",
   "main": "lib/index.js",
   "scripts": {
@@ -58,7 +58,8 @@
     "wecryptojs": "^1.2.38",
     "werpcjs": "^1.2.136",
     "ws": "^3.3.3",
-    "webpack-sources": "1.0.1"
+    "webpack-sources": "1.0.1",
+    "@babel/runtime": "^7.1.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
@@ -68,7 +69,6 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-es2015": "^7.0.0-beta.53",
     "@babel/register": "^7.0.0",
-    "@babel/runtime": "^7.1.2",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^8.0.4",
     "babel-minify-webpack-plugin": "^0.3.1",
