@@ -2,20 +2,8 @@
   "presets": [
 		[
 			"@babel/preset-env",
-			{
-				"forceAllTransforms": true,
-				"targets": {
-					"esmodules" : false
-				}
-			},
  		]
 	],
 	"plugins" : [
-		[
-			"@babel/plugin-transform-runtime",
-			{
-				"polyfill" : false
-			}
-		]
 	]
 }

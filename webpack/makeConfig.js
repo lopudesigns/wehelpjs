@@ -38,7 +38,6 @@ function makeConfig(options) {
   _.defaults(options, DEFAULTS);
 
   const isDevelopment = options.isDevelopment;
-	console.log('ISDEV', isDevelopment)
   return {
     devtool: isDevelopment ? 'cheap-eval-source-map' : 'source-map',
     entry: {
@@ -54,14 +53,14 @@ function makeConfig(options) {
       rules: [
         {
 					test: /\.js?$/,
-					include: '/node_modules/',
+					include: '/node_modules/, /src/',
 					use: {
 						loader: 'babel-loader'
 					},
         },
         {
 					test: /\.json?$/,
-					include: '/node_modules/',
+					include: '/node_modules/, /src/',
           use: {
 						loader: 'json-loader'
 					}
