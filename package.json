@@ -1,6 +1,6 @@
 {
   "name": "wehelpjs",
-  "version": "0.6.59",
+  "version": "0.6.60",
   "description": "wehelpjs is the JavaScript API Library for the WeYouMe blockchain",
   "main": "lib/index.js",
   "scripts": {
@@ -65,6 +65,7 @@
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-plugin-transform-es2015-modules-simple-commonjs": "^0.3.0",
     "dotenv": "^6.1.0",
     "eslint": "^3.5.0",
     "eslint-plugin-import": "^1.15.0",
