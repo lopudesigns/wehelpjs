@@ -23,8 +23,8 @@ let exp = {
 	validators
 };
 
-for(var prop in exp){
-	Object.assign(exp, exp[prop])
-}
+// for(var prop in exp){
+// 	Object.assign(exp, exp[prop])
+// }
 
 module.exports = exp

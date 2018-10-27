@@ -1,4 +1,4 @@
-require('@babel/polyfill');
+// require('@babel/polyfill');
 import assert from 'assert';
 import should from 'should';
 import testPost from './test-post.json';
