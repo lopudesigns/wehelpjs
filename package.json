@@ -8,7 +8,7 @@
     "test-auth": "npm test --grep 'webuilder'",
     "build": "npm run build-browser && npm run build-node",
     "build-browser": "rm -rf dist && webpack -p --config webpack.config.js && du -h ./dist/*",
-    "build-node": "mkdir -p ./lib && cp -r ./src/* ./lib/ && babel ./src --experimental --out-dir ./lib && du -h ./lib/*",
+    "build-node": "mkdir -p ./lib && babel ./src --out-dir ./lib && du -h ./lib/*",
     "prepare": "npm run build",
     "push": "git add . ; git commit -m 'ready' ; git push origin dev",
     "pull": "git pull origin dev"
@@ -65,7 +65,6 @@
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "babel-minify-webpack-plugin": "^0.3.1",
-    "babel-plugin-transform-es2015-modules-simple-commonjs": "^0.3.0",
     "dotenv": "^6.1.0",
     "eslint": "^3.5.0",
     "eslint-plugin-import": "^1.15.0",
