@@ -9,6 +9,8 @@ const utils = require('./utils');
 const operations = require('./operations')
 const weauth = require('./weauth')
 const validators = require('./help/validators')
+require('@babel/polyfill')
+
 let exp = {
   api,
   auth,
