@@ -8,6 +8,7 @@ const config = require('./config');
 const utils = require('./utils');
 const operations = require('./operations')
 const weauth = require('./weauth')
+const validators = require('./help/validators')
 let exp = {
   api,
   auth,
@@ -18,7 +19,8 @@ let exp = {
 	utils,
 	help,
 	operations,
-	weauth
+	weauth,
+	validators
 };
 
 for(var prop in exp){
