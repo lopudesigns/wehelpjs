@@ -2,6 +2,9 @@
   "presets": [
 		[
 			"@babel/preset-env",
+			{
+				"forceAllTransforms" : true
+			}
  		]
 	],
 	"plugins" : [
