@@ -1,4 +1,4 @@
-import each from 'lodash/each';
+var each = require('lodash/each');
 const defaultConfig = require('../config.json');
 
 class Config {
@@ -22,4 +22,3 @@ if(typeof module.exports.Config !== 'undefined') {
   throw new Error("default config.json file may not contain a property 'Config'");
 }
 module.exports.Config = Config;
-export default configReady

@@ -1,5 +1,5 @@
-import assert from "assert"
-import { toImpliedDecimal, fromImpliedDecimal } from "../src/auth/serializer/src/number_utils"
+var assert = require("assert")
+var { toImpliedDecimal, fromImpliedDecimal } = require("../src/auth/serializer/src/number_utils")
 
 describe("wehelpjs.auth: Number utils", () => {
     

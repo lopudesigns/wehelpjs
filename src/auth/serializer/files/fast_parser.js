@@ -1,4 +1,4 @@
-import { PublicKey } from "../../ecc"
+var { PublicKey } = require("../../ecc")
 
 class FastParser {
 

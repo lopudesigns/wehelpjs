@@ -1,4 +1,4 @@
-import assert from "assert"
+var assert = require("assert")
 
 /**
     Convert 12.34 with a precision of 3 into 12340

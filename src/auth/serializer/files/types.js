@@ -7,12 +7,11 @@ const ObjectId = require('./object_id')
 const fp = require('./fast_parser');
 const chain_types = require('./ChainTypes')
 
-import { PublicKey, Address, ecc_config } from "../../ecc"
-import { fromImpliedDecimal } from "./number_utils"
+var { PublicKey, Address, ecc_config } = require("../../ecc")
+var { fromImpliedDecimal } = require("./number_utils")
 
 const Types = {}
 module.exports = Types
-export default Types
 const HEX_DUMP = process.env.npm_config__graphene_serializer_hex_dump
 
 /**

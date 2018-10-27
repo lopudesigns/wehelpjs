@@ -1,10 +1,10 @@
-import secureRandom from 'secure-random';
-import ByteBuffer from 'bytebuffer';
-import crypto from 'browserify-aes';
-import assert from 'assert';
-import PublicKey from './key_public';
-import PrivateKey from './key_private';
-import hash from './hash';
+var secureRandom = require('secure-random');
+var ByteBuffer = require('bytebuffer');
+var crypto = require('browserify-aes');
+var assert = require('assert');
+var PublicKey = require('./key_public');
+var PrivateKey = require('./key_private');
+var hash = require('./hash');
 
 const Long = ByteBuffer.Long;
 

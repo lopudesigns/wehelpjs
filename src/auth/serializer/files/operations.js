@@ -31,8 +31,8 @@ static_variant [
 
 // Merge tmp.js - See "Generated code follows" below
 
-import types from "./types"
-import SerializerImpl from "./serializer"
+var types = require("./types")
+var SerializerImpl = require("./serializer")
 
 const {
     //id_type,

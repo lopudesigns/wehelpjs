@@ -60,5 +60,3 @@ module.exports = toExport = {
     // hash256: hash256,
     // HmacSHA512: HmacSHA512
 }
-
-export default toExport
