@@ -1,6 +1,6 @@
 {
   "name": "wehelpjs",
-  "version": "0.6.64",
+  "version": "0.6.65",
   "description": "wehelpjs is the JavaScript API Library for the WeYouMe blockchain",
   "main": "lib/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "test-auth": "npm test --grep 'webuilder'",
     "build": "npm run build-browser && npm run build-node",
     "build-browser": "rm -rf dist && webpack -p --config webpack.config.js && du -h ./dist/*",
-    "build-node": "mkdir -p ./lib && babel ./src --out-dir ./lib && du -h ./lib/*",
+    "build-node": "mkdir -p ./lib && cp -r src/ lib/ && babel ./src --out-dir ./lib && du -h ./lib/*",
     "prepare": "npm run build",
     "push": "git add . ; git commit -m 'ready' ; git push origin dev",
     "pull": "git pull origin dev"

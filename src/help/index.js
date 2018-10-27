@@ -4,7 +4,9 @@ let validators = require('./validators.js')
 import { key_utils } from '../auth/ecc'
 
 /** merge with this */
+if(this){
 	Object.assign(this, validators)
+}
 
 let	createAccount = function({
 	accountCreatorAccountUsername,

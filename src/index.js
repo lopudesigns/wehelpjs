@@ -1,3 +1,4 @@
+require('@babel/polyfill')
 const api = require('./api');
 const auth = require('./auth');
 const help = require('./help');
@@ -9,7 +10,6 @@ const utils = require('./utils');
 const operations = require('./operations')
 const weauth = require('./weauth')
 const validators = require('./help/validators')
-require('@babel/polyfill')
 
 let exp = {
   api,

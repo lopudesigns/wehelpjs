@@ -145,5 +145,3 @@ exports = module.exports = wehelpjsBroadcast => {
     });
   };
 };
-
-export default wehelpjsBroadcast;
