@@ -1,19 +1,19 @@
 module.exports = {
 
     // Primary class for creating operations
-    Serializer: require('./src/serializer'),
+    Serializer: require('./files/serializer'),
 
     // helper functions for creating operations
-    fp: require('./src/fast_parser'),
+    fp: require('./files/fast_parser'),
 
     // Low level types
-    types: require('./src/types'),
+    types: require('./files/types'),
 
     // Higher level operations (made out of generic types)
-    ops: require('./src/operations'),
+    ops: require('./files/operations'),
 
     // Utility that generates JSON examples
-    template: require('./src/template'),
+    template: require('./files/template'),
 
-    number_utils: require('./src/number_utils'),
+    number_utils: require('./files/number_utils'),
 }

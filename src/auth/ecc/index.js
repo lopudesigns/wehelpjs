@@ -1,12 +1,12 @@
 
 module.exports = {
-    Address: require("./src/address"),
-    Aes: require("./src/aes"),
-    PrivateKey: require("./src/key_private"),
-    PublicKey: require("./src/key_public"),
-    Signature: require("./src/signature"),
-    brainKey: require("./src/brain_key"),
-    key_utils: require("./src/key_utils"),
-    hash: require("./src/hash"),
+    Address: require("./files/address"),
+    Aes: require("./files/aes"),
+    PrivateKey: require("./files/key_private"),
+    PublicKey: require("./files/key_public"),
+    Signature: require("./files/signature"),
+    brainKey: require("./files/brain_key"),
+    key_utils: require("./files/key_utils"),
+    hash: require("./files/hash"),
     ecc_config: require("../../config")
 }

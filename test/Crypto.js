@@ -2,8 +2,8 @@ import { Aes, PrivateKey, PublicKey, Signature } from "../src/auth/ecc"
 import assert from "assert"
 
 var secureRandom = require('secure-random');
-var hash = require('../src/auth/ecc/src/hash');
-var key = require('../src/auth/ecc/src/key_utils');
+var hash = require('../src/auth/ecc/files/hash');
+var key = require('../src/auth/ecc/files/key_utils');
 
 describe("wehelpjs.auth: Crypto", function() {
 

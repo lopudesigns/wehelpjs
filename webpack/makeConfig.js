@@ -2,8 +2,6 @@
 const Visualizer = require('webpack-visualizer-plugin');
 const _ = require('lodash');
 const path = require('path');
-const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MinifyPlugin = require("babel-minify-webpack-plugin");
 
 require('dotenv').config()
@@ -24,7 +22,6 @@ function makePlugins(options) {
 
   if (!isDevelopment) {
     plugins = plugins.concat([
-			new webpack.optimize.AggressiveMergingPlugin(),
 			new MinifyPlugin({}, {
 				comments: false
 			})
@@ -51,13 +48,13 @@ function makeConfig(options) {
     plugins: makePlugins(options),
     module: {
       rules: [
-        {
-					test: /\.js?$/,
-					include: '/node_modules/, /src/',
-					use: {
-						loader: 'babel-loader'
-					},
-        },
+				// {
+				// 	test: /\.js?$/,
+				// 	include: '/src/',
+				// 	use: {
+				// 		loader: 'babel-loader'
+				// 	}
+				// },
         {
 					test: /\.json?$/,
 					include: '/node_modules/, /src/',

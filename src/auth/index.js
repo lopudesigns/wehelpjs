@@ -4,11 +4,11 @@ var bigi = require('bigi'),
 	Point = ecurve.Point,
 	secp256k1 = ecurve.getCurveByName('secp256k1'),
 	config = require('../config'),
-	operations = require('./serializer/src/operations'),
-	Signature = require('./ecc/src/signature'),
-	KeyPrivate = require('./ecc/src/key_private'),
-	PublicKey = require('./ecc/src/key_public'),
-  hash = require('./ecc/src/hash');
+	operations = require('./serializer/files/operations'),
+	Signature = require('./ecc/files/signature'),
+	KeyPrivate = require('./ecc/files/key_private'),
+	PublicKey = require('./ecc/files/key_public'),
+  hash = require('./ecc/files/hash');
 import { key_utils } from './ecc'; // eslint-disable-line camelcase
 
 var Auth = {};

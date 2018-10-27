@@ -6,10 +6,10 @@ const get = require('lodash/get');
 const has = require('lodash/has');
 const hasIn = require('lodash/hasIn');
 const set = require('lodash/set');
-const operationAuthor = require('./src/operation-author.json');
-const customOperations = require('./src/custom-operations');
-const helperOperations = require('./src');
-const validationUtils = require('./src/validation-utils')
+const operationAuthor = require('./files/operation-author.json');
+const customOperations = require('./files/custom-operations');
+const helperOperations = require('./files');
+const validationUtils = require('./files/validation-utils')
 /** Parse error message from Node response */
 const getErrorMessage = (error) => {
   let errorMessage = '';

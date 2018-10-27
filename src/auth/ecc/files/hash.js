@@ -1,5 +1,7 @@
-import createHash from 'create-hash';
-import createHmac from 'create-hmac';
+// import createHash from 'create-hash';
+// import createHmac from 'create-hmac';
+var createHash = require('create-hash');
+var createHmac = require('create-hmac');
 
 /** @arg {string|Buffer} data
     @arg {string} [digest = null] - 'hex', 'binary' or 'base64'
