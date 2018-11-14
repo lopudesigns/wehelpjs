@@ -1,14 +1,14 @@
 let api = require('../api')
 let wecryptojs = require('wecryptojs')
-let validators = require('./validators.js')
+let validators = require('../validators')
 import { key_utils } from '../auth/ecc'
 
 /** merge with this */
-if(this){
-	Object.assign(this, validators)
-}
+// if(this){
+// 	Object.assign(this, validators)
+// }
 
-let	createAccount = function({
+export let createAccount = function({
 	accountCreatorAccountUsername,
 	signingPrivateKey,
 	useSigningPrivateKeyAsMasterPasswordGen,
@@ -70,7 +70,7 @@ let	createAccount = function({
 	}
 }
 
-let fillGaps = function(args){
+export let fillGaps = function(args){
 	init(args, this)
 	/** ifs
 	 * @var {0}
@@ -117,14 +117,14 @@ let fillGaps = function(args){
 		Promise.all([])
 
 }
-let generateUsername = function(args){
+export let generateUsername = function(args){
 	init(args, this)
 	return new Promise((resolve, reject)=>{
 		username = wecryptojs.sha256()
 		resolve(username)
 	})
 }
-let usernameCheck = function(args){
+export let usernameCheck = function(args){
 	init(args, this)
 	return new Promise((resolve, reject)=>{
 		if(!newAccountUsername){
@@ -158,10 +158,10 @@ let usernameCheck = function(args){
 		}
 	})
 }
-let handleKeys = function(args){
+export let handleKeys = function(args){
 
 }
-let collateKeys = function(args){
+export let collateKeys = function(args){
 	let keys = {}
 	let wanted = mainKeys
 		for(key in args){
@@ -171,10 +171,10 @@ let collateKeys = function(args){
 		}
 		return keys
 }
-let checkKeys = function(args){
+export let checkKeys = function(args){
 
 }
-let init = function(args, that){
+export let init = function(args, that){
 	Object.keys(args).forEach((key) => {
     Object.defineProperty(that, key, {
         value: args[key]
@@ -182,25 +182,23 @@ let init = function(args, that){
 	});
 }
 
-var mainKeys = [
+export var mainKeys = [
 	'ownerPub',
 	'postingPub',
 	'activePub',
 	'memoPub'
 ]
-var errors = [
+export var errors = [
 ]
-var enums = {
+export var enums = {
 	"human": 1,
 	"wallet": 2,
 	"yes": 3,
 	"no": 4
 }
 
-let createSuggestedPassword = () => {
+export var createSuggestedPassword = () => {
   const PASSWORD_LENGTH = 32;
   const privateKey = key_utils.get_random_key();
   return privateKey.toWif().substring(3, 3 + PASSWORD_LENGTH);
 };
-
-module.exports = this
