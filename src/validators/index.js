@@ -1,1 +1,1 @@
-export default require('./validators.js')
+export * from './validators.js'
